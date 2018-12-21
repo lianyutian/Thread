@@ -1,4 +1,4 @@
-package com.concurrency.concurrency.concurrencyTest;
+package com.concurrency.concurrency.atomic;
 
 import com.concurrency.concurrency.annoations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
@@ -8,11 +8,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicStampedReference;
 
 @Slf4j
 @NotThreadSafe
-public class ExampleTest2 {
+public class AtomicExample1 {
     public static int clientTotal = 5000;
     public static int threadTotal = 200;
     public static AtomicInteger count = new AtomicInteger(0);
