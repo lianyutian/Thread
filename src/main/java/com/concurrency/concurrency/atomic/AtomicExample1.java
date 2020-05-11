@@ -15,6 +15,7 @@ public class AtomicExample1 {
     public static int clientTotal = 5000;
     public static int threadTotal = 200;
     public static AtomicInteger count = new AtomicInteger(0);
+
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
@@ -36,6 +37,7 @@ public class AtomicExample1 {
         log.info("count:{}", count.get());
 
     }
+
     private static void add() {
         count.getAndIncrement();
     }

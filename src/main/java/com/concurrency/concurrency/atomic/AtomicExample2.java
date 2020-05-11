@@ -19,7 +19,7 @@ public class AtomicExample2 {
     private static AtomicIntegerFieldUpdater updater = AtomicIntegerFieldUpdater.newUpdater(AtomicExample2.class,"count" );
 
     @Getter
-    public volatile int count = 100;
+    public volatile  int count = 100;
 
     public static AtomicExample2 atomicExample2 = new AtomicExample2();
 
